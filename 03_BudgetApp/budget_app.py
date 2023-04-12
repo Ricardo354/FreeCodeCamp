@@ -22,7 +22,7 @@ class Category:
 
     def transfer(self, amount, description):
         if Category.withdraw(self, amount, f'Transfer to {description}'):
-            Category.deposit(self, amount, f'Trasnfer from {}')
+            Category.deposit(self, amount, f'Trasnfer from {description}')
         else:
             return False
 
@@ -31,10 +31,21 @@ class Category:
             return True
         else:
             return False
+         
+    def __repr__(self):
+        header = self.description.center(30,'*') + '\n'
+        thingie = ''
+        for i in self.ledger:
+            for _  in i.values():
+                thingie += str(_) + ' ' * 3
+                
+        return header + thingie
 
-    def __repr__()
+p1 = Category('Food')
+Category.deposit(p1,25,'nigga')
+print(Category.__repr__(p1))
 
-
+            
 
 def create_spend_chart(catgories):
     pass
