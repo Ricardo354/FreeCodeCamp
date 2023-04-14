@@ -36,13 +36,16 @@ class Category:
         header = self.description.center(30,'*') + '\n'
         thingie = ''
         for i in self.ledger:
-            for _  in i.values():
-                thingie += str(_) + ' ' * 3
+            desc = "{:<23}".format(i['description'])
+            price = "{:>7.2f}".format(i['amount'])
+            thingie += '{}{}\n'.format(desc[:23], price[:7])
                 
         return header + thingie
 
 p1 = Category('Food')
-Category.deposit(p1,25,'nigga')
+Category.deposit(p1,25,'initial deposit')
+Category.deposit(p1,50,'final deposit')
+Category.withdraw(p1,15.89,'restaurant and more food')
 print(Category.__repr__(p1))
 
             
