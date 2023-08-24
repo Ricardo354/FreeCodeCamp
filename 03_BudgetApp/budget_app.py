@@ -9,7 +9,7 @@ class Category:
         self.balance += amount
         self.ledger.append({"amount": amount, "description": description})
         
-    def withdraw(self, amount, description):
+    def withdraw(self, amount, description=''):
         if self.balance - amount >= 0:
             self.ledger.append({'amount': -1 * amount, 'description':description})
             self.balance -= amount
@@ -19,13 +19,15 @@ class Category:
 
     def get_balance(self):
         return self.balance
-
-    def transfer(self, amount, description):
-        if Category.withdraw(self, amount, f'Transfer to {description}'):
-            Category.deposit(self, amount, f'Trasnfer from {description}')
+    
+    
+    def transfer(self, amount, category_instance):
+        if self.withdraw(amount, "Transfer to {}".format(category_instance.description)):
+            category_instance.deposit(amount, "Transfer from {}".format(self.description))
+            return True
         else:
             return False
-
+    
     def check_funds(self, amount):
         if self.balance >= amount:
             return True
@@ -39,16 +41,35 @@ class Category:
             desc = "{:<23}".format(i['description'])
             price = "{:>7.2f}".format(i['amount'])
             thingie += '{}{}\n'.format(desc[:23], price[:7])
-                
-        return header + thingie
+            total = f'Total: {self.balance}'
+        return header + thingie + total
 
-p1 = Category('Food')
-Category.deposit(p1,25,'initial deposit')
-Category.deposit(p1,50,'final deposit')
-Category.withdraw(p1,15.89,'restaurant and more food')
-print(Category.__repr__(p1))
+def create_spend_chart(categories):
+    spent_amounts = []
+    for category in categories:
+        spent = 0
+        for item in category.ledger:
+            if item["amount"] < 0:
+                spent += abs(item["amount"])
+        spent_amounts.append(round(spent, 2))
+    total = round(sum(spent_amounts), 2)
+    spent_percentage = list(map(lambda amount: int((((amount / total) * 10) // 1) * 10), spent_amounts))
+    header = "Percentage spent by category\n"
+    chart = ""
+    for value in reversed(range(0, 101, 10)):
+        chart += str(value).rjust(3) + '|'
+        for percent in spent_percentage:
+            if percent >= value:
+                chart += " o "
+            else:
+                chart += "   "
+        chart += " \n"
 
-            
+    footer = "    " + "-" * ((3 * len(categories)) + 1) + "\n"
+    descriptions = list(map(lambda category: category.description, categories))
+    max_length = max(map(lambda description: len(description), descriptions))
+    descriptions = list(map(lambda description: description.ljust(max_length), descriptions))
+    for x in zip(*descriptions):
+        footer += "    " + "".join(map(lambda s: s.center(3), x)) + " \n"
 
-def create_spend_chart(catgories):
-    pass
+    return (header + chart + footer).rstrip("\n")
