@@ -11,3 +11,7 @@ https://www.freecodecamp.org/learn/scientific-computing-with-python/scientific-c
 https://www.freecodecamp.org/learn/scientific-computing-with-python/scientific-computing-with-python-projects/polygon-area-calculator ✅
 
 https://www.freecodecamp.org/learn/scientific-computing-with-python/scientific-computing-with-python-projects/probability-calculator ✅
+
+# Certification
+
+https://www.freecodecamp.org/certification/RicardoTeixeira/scientific-computing-with-python-v7
