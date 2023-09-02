@@ -1,6 +1,6 @@
 # FreeCodeCamp Scientific Computing in Python Certification
 
-![FreeCodeCamp Logo](https://www.freecodecamp.org/news/content/images/2021/06/fcc-primary-small.png)
+![FreeCodeCamp Logo](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.82YwuuaWdR7gvN4O0MpTTwHaFC%26pid%3DApi&f=1&ipt=e12163353c645cf6c08cf0c121a9d32f1234e785d4b9d81a0022c8c924bb0437&ipo=images)
 
 I am proud to announce that I have successfully completed the FreeCodeCamp course in Scientific Computing with Python and earned my certification. This certification represents my dedication and proficiency in using Python for scientific computing tasks.
 
@@ -30,7 +30,7 @@ I have completed a series of challenging projects as part of this certification.
    - Description: In essence, this project helps you work with rectangles and squares, allowing you to calculate various properties and visualize them as patterns of "*" characters.
    - GitHub Repository: [Link to GitHub Repository](https://github.com/Ricardo354/FreeCodeCamp_projects/tree/main/04_PolygonAreaCalculator)
 
-5. **Project 5:** [Project Title](https://www.freecodecamp.org/learn/scientific-computing-with-python/scientific-computing-with-python-projects/probability-calculator)
+5. **Project 5:** [Probability Calculator](https://www.freecodecamp.org/learn/scientific-computing-with-python/scientific-computing-with-python-projects/probability-calculator)
    - Description: It is a Python program that simulates a series of experiments to calculate and analyze probabilities. It allows users to define events, run simulations, and obtain statistics to understand and predict the likelihood of various outcomes. This project is a practical application of probability theory using Python programming..
    - GitHub Repository: [Link to GitHub Repository](https://github.com/Ricardo354/FreeCodeCamp_projects/tree/main/05_ProbabilityCalculator)
 
