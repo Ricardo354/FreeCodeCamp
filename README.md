@@ -26,7 +26,7 @@ I have completed a series of challenging projects as part of this certification.
    - Description: It is a Python application for managing and tracking a budget. This app allows users to create categories, deposit funds, withdraw funds, check balances, and perform various budget-related actions to help them manage their finances effectively.
    - GitHub Repository: [Link to GitHub Repository](https://github.com/Ricardo354/FreeCodeCamp_projects/tree/main/03_BudgetApp)
 
-4. **Project 4:** [Polygon Area Calculator](https://www.freecodecamp.org/learn/scientific-computing-with-python/#scientific-computing-with-python-projects)
+4. **Project 4:** [Polygon Area Calculator](https://www.freecodecamp.org/learn/scientific-computing-with-python/scientific-computing-with-python-projects/polygon-area-calculator)
    - Description: In essence, this project helps you work with rectangles and squares, allowing you to calculate various properties and visualize them as patterns of "*" characters.
    - GitHub Repository: [Link to GitHub Repository](https://github.com/Ricardo354/FreeCodeCamp_projects/tree/main/04_PolygonAreaCalculator)
 
