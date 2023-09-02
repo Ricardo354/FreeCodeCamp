@@ -40,7 +40,7 @@ Please visit the respective GitHub repositories to explore these projects in det
 
 You can verify my certification by clicking on the badge below:
 
-[![FreeCodeCamp Certification](https://www.freecodecamp.org/certification/RicardoTeixeira/scientific-computing-with-python-v7)
+![FreeCodeCamp Certification](https://www.freecodecamp.org/certification/RicardoTeixeira/scientific-computing-with-python-v7)
 
 ## About FreeCodeCamp
 
